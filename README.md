@@ -21,7 +21,7 @@ A secure authentication system with local email/password and Twitter OAuth 2.0 i
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/authentication-portal.git
+git clone https://github.com/priyam4501/LOGIN-APP.git
 cd authentication-portal
 ```
 
