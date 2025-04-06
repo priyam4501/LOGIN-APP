@@ -62,9 +62,10 @@ http://localhost:3000
 
 ## 📸 Screenshots
 
-| Login Page | Secrets Page |
-|------------|--------------|
-| ![Login Page](SNAPSHOT/HOMEPAGE.png) | ![Secrets Page](SNAPSHOT/After%20Login%20Message%20Page.png) |
+
+| Login | Twitter OAuth2.0 | Post Login | 
+|------------|--------------|--------------|
+| ![Login Page](SNAPSHOT/HOMEPAGE.png) |![Twitter App Page](SNAPSHOT/Twitter%20Auth%20App.png)| ![Secrets Page](SNAPSHOT/After%20Login%20Message%20Page.png) |
 
 ## 🧩 Technology Stack
 
