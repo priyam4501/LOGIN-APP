@@ -31,16 +31,10 @@ npm install
 ```
 
 3. Set up environment variables:
+
+First create a `.env.example` file with the template below, then copy it to `.env`:
 ```bash
-cp .env.example .env
-```
-
-## ⚙️ Configuration
-
-Create a `.env` file with these required variables:
-
-```ini
-PG_USER=your_postgres_user
+echo "PG_USER=your_postgres_user
 PG_HOST=localhost
 PG_DATABASE=your_database_name
 PG_PASSWORD=your_postgres_password
@@ -48,8 +42,11 @@ PG_PORT=5432
 SESSION_SECRET=your_session_secret
 TWITTER_CLIENT_ID=your_twitter_client_id
 TWITTER_CLIENT_SECRET=your_twitter_client_secret
-TWITTER_CALLBACK_URL=http://localhost:3000/auth/twitter/secrets
+TWITTER_CALLBACK_URL=http://localhost:3000/auth/twitter/secrets" > .env.example
+
+cp .env.example .env
 ```
+Then edit the `.env` file with your actual credentials. The `.env` file stores sensitive configuration separately from your code.
 
 ## 🚀 Usage
 
