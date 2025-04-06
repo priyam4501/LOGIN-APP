@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="text"><h1>
+We solve digital 
+problems with an 
+outstanding 
+creative flare</h1><p>
+We have created a new product that will help 
+designers, developers and companies create 
+websites for their startups quickly and easily
+            </p>
+            
+        </div>
+        <div class="border">
+            <div class="body">
+                <div class="tab-buttons">
+                    <div>
+                        <button onclick="showTab('signup', this)" class="active">SIGN UP</button>
+                    </div>
+                    <div>
+                        <button onclick="showTab('login', this)">LOGIN</button>
+                    </div>
+                </div>
+        
+                <div id="signup"
+                    class="tab <%= (typeof activeTab === 'undefined' || activeTab === 'signup') ? 'active' : '' %> signup-tab">
+                    <% if (typeof error !=='undefined' && (typeof activeTab==='undefined' || activeTab==='signup' )) { %>
+                        <div class="error-message" style="color: red; margin-bottom: 10px;">
+                            <%= error %>
+                        </div>
+                        <% } %>
+                            <form action="/register" method="POST">
+                                <input type="email" id="signup-email" name="userid" placeholder="Your email" required>
+                                <br><br>
+                                <input type="password" id="signup-password" name="password" placeholder="Your password"
+                                    required>
+                                <br>
+                                <button type="submit">Create an Account</button>
+                            </form>
+                            <button style="background-color: #0088ff;">
+                                <a href="/auth/twitter" style="text-decoration: none; color:white;">Sign Up via Twitter</a>
+                            </button>
+        
+                </div>
+        
+                <div id="login"
+                    class="tab <%= (typeof activeTab !== 'undefined' && activeTab === 'login') ? 'active' : '' %> login-tab">
+                    <% if (typeof error !=='undefined' && typeof activeTab !=='undefined' && activeTab==='login' ) { %>
+                        <div class="error-message" style="color: red; margin-bottom: 10px;">
+                            <%= error %>
+                        </div>
+                        <% } %>
+                            <form action="/login" method="POST">
+                                <input type="email" id="login-email" name="userid" placeholder="Your email" required>
+                                <br><br>
+                                <input type="password" id="login-password" name="password" placeholder="Your password" required>
+                                <br>
+                                <button type="submit">Login</button>
+                            </form>
+                            <button style="background-color: #0088ff;">
+                                <a href="/auth/twitter" style="text-decoration: none; color:white;">Sign In via Twitter</a>
+                            </button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    
+  
+
+    <script>
+        function showTab(tabName, button) {
+            // Update tab visibility
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabName).classList.add('active');
+
+            // Update button active state
+            const buttons = document.querySelectorAll('.tab-buttons button');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+        }
+
+    </script>
+</body>
+
+</html>
