@@ -52,7 +52,7 @@ Then edit the `.env` file with your actual credentials. The `.env` file stores s
 
 1. Start the development server:
 ```bash
-npm start
+node index.js
 ```
 
 2. Access the application at:
