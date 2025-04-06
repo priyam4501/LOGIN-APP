@@ -78,6 +78,3 @@ http://localhost:3000
 - **Styling**: CSS with responsive design
 - **Security**: bcrypt for password hashing
 
-## 📜 License
-
-MIT License - see [LICENSE](LICENSE) for details.
